@@ -35,4 +35,6 @@ public interface BackendInterface {
   
   public String mapData();
   
+  double getWalkingTimeBetween(String node1, String node2);
+
 }

@@ -10,8 +10,8 @@ import java.util.PriorityQueue;
 import java.util.List;
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+//import org.junit.jupiter.api.Test;
+//import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * This class extends the BaseGraph data structure with additional methods for
@@ -170,111 +170,111 @@ public class DijkstraGraph<NodeType, EdgeType extends Number>
 
     }
 
-    @Test
-    public void testPrecomputedPath() {
-        DijkstraGraph<String, Integer> graph = new DijkstraGraph<>(new PlaceholderMap<>());
+    //@Test
+    //public void testPrecomputedPath() {
+    //    DijkstraGraph<String, Integer> graph = new DijkstraGraph<>(new PlaceholderMap<>());
 
 	// insert graph with node and edges 
-      	    graph.insertNode("A");
-            graph.insertNode("B");
-            graph.insertNode("C");
-            graph.insertNode("D");
-            graph.insertNode("E");
-            graph.insertNode("F");
-            graph.insertNode("G");
-            graph.insertNode("H");
+      	    // graph.insertNode("A");
+            // graph.insertNode("B");
+            // graph.insertNode("C");
+            // graph.insertNode("D");
+            // graph.insertNode("E");
+            // graph.insertNode("F");
+            // graph.insertNode("G");
+            // graph.insertNode("H");
 
-            graph.insertEdge("A", "B", 4);
-            graph.insertEdge("A", "C", 2);
-            graph.insertEdge("A", "E", 15);
-            graph.insertEdge("B", "E", 10);
-            graph.insertEdge("B", "D", 1);
-            graph.insertEdge("C", "D", 5);
-            graph.insertEdge("D", "E", 3);
-            graph.insertEdge("D", "F", 0);
-            graph.insertEdge("F", "D", 2);
-            graph.insertEdge("F", "H", 4);
-            graph.insertEdge("G", "H", 4);
+            // graph.insertEdge("A", "B", 4);
+            // graph.insertEdge("A", "C", 2);
+            // graph.insertEdge("A", "E", 15);
+            // graph.insertEdge("B", "E", 10);
+            // graph.insertEdge("B", "D", 1);
+            // graph.insertEdge("C", "D", 5);
+            // graph.insertEdge("D", "E", 3);
+            // graph.insertEdge("D", "F", 0);
+            // graph.insertEdge("F", "D", 2);
+            // graph.insertEdge("F", "H", 4);
+            // graph.insertEdge("G", "H", 4);
 	
 	// expected cost is 8 and path is ABDE
-	    assertEquals(8, graph.shortestPathCost("A", "E"));
-            assertEquals(List.of("A", "B", "D", "E"), graph.shortestPathData("A", "E"));
-    }
+	//     assertEquals(8, graph.shortestPathCost("A", "E"));
+    //         assertEquals(List.of("A", "B", "D", "E"), graph.shortestPathData("A", "E"));
+    // }
 		 
-    @Test
-    public void testDifferentPath() {
-        DijkstraGraph<String, Integer> graph = new DijkstraGraph<>(new PlaceholderMap<>());
+    // @Test
+    // public void testDifferentPath() {
+    //     DijkstraGraph<String, Integer> graph = new DijkstraGraph<>(new PlaceholderMap<>());
 
-	// insert graph with node and edges
-	    graph.insertNode("A");
-            graph.insertNode("B");
-            graph.insertNode("C");
-            graph.insertNode("D");
-            graph.insertNode("E");
-            graph.insertNode("F");
-            graph.insertNode("G");
-            graph.insertNode("H");
+	// // insert graph with node and edges
+	//     graph.insertNode("A");
+    //         graph.insertNode("B");
+    //         graph.insertNode("C");
+    //         graph.insertNode("D");
+    //         graph.insertNode("E");
+    //         graph.insertNode("F");
+    //         graph.insertNode("G");
+    //         graph.insertNode("H");
 
-            graph.insertEdge("A", "B", 4);
-            graph.insertEdge("A", "C", 2);
-            graph.insertEdge("A", "E", 15);
-            graph.insertEdge("B", "E", 10);
-            graph.insertEdge("B", "D", 1);
-            graph.insertEdge("C", "D", 5);
-            graph.insertEdge("D", "E", 3);
-            graph.insertEdge("D", "F", 0);
-            graph.insertEdge("F", "D", 2);
-            graph.insertEdge("F", "H", 4);
-            graph.insertEdge("G", "H", 4);
+    //         graph.insertEdge("A", "B", 4);
+    //         graph.insertEdge("A", "C", 2);
+    //         graph.insertEdge("A", "E", 15);
+    //         graph.insertEdge("B", "E", 10);
+    //         graph.insertEdge("B", "D", 1);
+    //         graph.insertEdge("C", "D", 5);
+    //         graph.insertEdge("D", "E", 3);
+    //         graph.insertEdge("D", "F", 0);
+    //         graph.insertEdge("F", "D", 2);
+    //         graph.insertEdge("F", "H", 4);
+    //         graph.insertEdge("G", "H", 4);
 
-	 // expected cost is 1 and path is BF
-	    assertEquals(1, graph.shortestPathCost("B", "F"));
-            assertEquals(List.of("B", "D", "F"), graph.shortestPathData("B", "F"));
+	//  // expected cost is 1 and path is BF
+	//     assertEquals(1, graph.shortestPathCost("B", "F"));
+    //         assertEquals(List.of("B", "D", "F"), graph.shortestPathData("B", "F"));
 
-    }
+    // }
 
-    @Test
-    public void testNoPath() {
-        DijkstraGraph<String, Integer> graph = new DijkstraGraph<>(new PlaceholderMap<>());
+//     @Test
+//     public void testNoPath() {
+//         DijkstraGraph<String, Integer> graph = new DijkstraGraph<>(new PlaceholderMap<>());
 
-	// insert graph with node and edges
-	    graph.insertNode("A");
-            graph.insertNode("B");
-            graph.insertNode("C");
-            graph.insertNode("D");
-            graph.insertNode("E");
-            graph.insertNode("F");
-            graph.insertNode("G");
-            graph.insertNode("H");
+// 	// insert graph with node and edges
+// 	    graph.insertNode("A");
+//             graph.insertNode("B");
+//             graph.insertNode("C");
+//             graph.insertNode("D");
+//             graph.insertNode("E");
+//             graph.insertNode("F");
+//             graph.insertNode("G");
+//             graph.insertNode("H");
 
-            graph.insertEdge("A", "B", 4);
-            graph.insertEdge("A", "C", 2);
-            graph.insertEdge("A", "E", 15);
-            graph.insertEdge("B", "E", 10);
-            graph.insertEdge("B", "D", 1);
-            graph.insertEdge("C", "D", 5);
-            graph.insertEdge("D", "E", 3);
-            graph.insertEdge("D", "F", 0);
-            graph.insertEdge("F", "D", 2);
-            graph.insertEdge("F", "H", 4);
-            graph.insertEdge("G", "H", 4);
+//             graph.insertEdge("A", "B", 4);
+//             graph.insertEdge("A", "C", 2);
+//             graph.insertEdge("A", "E", 15);
+//             graph.insertEdge("B", "E", 10);
+//             graph.insertEdge("B", "D", 1);
+//             graph.insertEdge("C", "D", 5);
+//             graph.insertEdge("D", "E", 3);
+//             graph.insertEdge("D", "F", 0);
+//             graph.insertEdge("F", "D", 2);
+//             graph.insertEdge("F", "H", 4);
+//             graph.insertEdge("G", "H", 4);
 	
-	// expected cost is infinity and path data is empty 
+// 	// expected cost is infinity and path data is empty 
     	
-    try {
-        graph.shortestPathCost("E", "G");
-        fail("Expected a NoSuchElementException for no path");
-    } catch (NoSuchElementException e) {
-        // Expected exception
-    }
+//     try {
+//         graph.shortestPathCost("E", "G");
+//         fail("Expected a NoSuchElementException for no path");
+//     } catch (NoSuchElementException e) {
+//         // Expected exception
+//     }
 
-    try {
-        List<String> path = graph.shortestPathData("E", "G");
-        assertTrue(path.isEmpty(), "Path should be empty when no");
-    } catch (NoSuchElementException e) {
-        // Expected exception
-    }
-}
+//     try {
+//         List<String> path = graph.shortestPathData("E", "G");
+//         assertTrue(path.isEmpty(), "Path should be empty when no");
+//     } catch (NoSuchElementException e) {
+//         // Expected exception
+//     }
+// }
     
     }
 

@@ -77,6 +77,20 @@ public class Backend implements BackendInterface {
                 "\nTotal walking time: " + totalWalkingTime;
     }
 
+ /**
+ * Returns the walking time between two nodes.
+ * @param node1 Starting node
+ * @param node2 Destination node
+ * @return Walking time in seconds, or -1 if no edge exists
+ */
+public double getWalkingTimeBetween(String node1, String node2) {
+    if (graph.containsEdge(node1, node2)) {
+        return graph.getEdge(node1, node2);
+    }
+    return -1; // Edge가 없을 경우
+}
+   
+
     public boolean containsNode(String data) {
         return graph.containsNode(data);
     }

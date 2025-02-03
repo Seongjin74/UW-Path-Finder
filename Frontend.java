@@ -145,9 +145,20 @@ public class Frontend implements FrontendInterface {
                 List<String> path = backend.shortestPath(start, end);
                 if (path != null && !path.isEmpty()) {
                     System.out.println("Shortest path from " + start + " to " + end + ":");
-                    for (String building : path) {
-                        System.out.println(building);
+
+                    double totalWalkTime = 0;
+                    
+                    // 각 구간별 이동 시간 출력
+                    for (int i = 0; i < path.size() - 1; i++) {
+                        String from = path.get(i);
+                        String to = path.get(i + 1);
+                        double time = backend.getWalkingTimeBetween(from, to);
+                        totalWalkTime += time;
+
+                        System.out.println(from + " -> " + to + " : " + time + " seconds");
                     }
+
+                    System.out.println("Total walk time: " + totalWalkTime + " seconds");
                 } else {
                     System.out.println("Path not found.");
                 }
@@ -158,6 +169,7 @@ public class Frontend implements FrontendInterface {
             System.out.println("Please load data first.");
         }
     }
+
 	
     /**
      * Exits the application.

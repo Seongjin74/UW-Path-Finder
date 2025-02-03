@@ -1,11 +1,3 @@
-// --== CS400 File Header Information ==--
-// Name: Seongjin Park
-// Email: spark644@wisc.edu
-// Group and Team: G28
-// Group TA: GRANT WALDOW
-// Lecturer: Florian Heimerl
-// Notes to Grader: <optional extra notes>
-
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 import java.util.Scanner;

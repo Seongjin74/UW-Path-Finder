@@ -1,10 +1,3 @@
-// --== CS400 File Header Information ==--
-// Name: Seongjin Park
-// Email: spark644@wisc.edu
-// Group and Team: G28
-// Group TA: GRANT WALDOW
-// Lecturer: Florian Heimerl
-// Notes to Grader: <optional extra notes>
 
 import java.util.ArrayList;
 import java.util.List;
